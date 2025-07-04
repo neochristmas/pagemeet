@@ -5,6 +5,7 @@ import 'package:page_meet/screens/board_screen.dart';
 import 'package:page_meet/screens/home_screen.dart';
 import 'package:page_meet/screens/library_screen.dart';
 import 'package:page_meet/screens/profile_screen.dart';
+import 'package:page_meet/theme/colors.dart';
 
 class PageMeetApp extends ConsumerWidget {
   PageMeetApp({super.key});
@@ -23,6 +24,9 @@ class PageMeetApp extends ConsumerWidget {
     return Scaffold(
       body: _screens[currentIdx],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: AppColors.primary,
+        backgroundColor: AppColors.bottomBackground,
+        unselectedItemColor: AppColors.accent.withValues(alpha: 0.6),
         currentIndex: currentIdx,
         onTap: (idx) => ref.read(bottomNavIndexProvider.notifier).state = idx,
         type: BottomNavigationBarType.fixed,
