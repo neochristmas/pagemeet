@@ -12,7 +12,7 @@ class HomeScreen extends ConsumerWidget {
   final booksProvider = StateNotifierProvider<BookListNotifier, List<Book>>(
     (ref) {
       final notifier = BookListNotifier();
-      notifier.fetchBooks('a');
+      notifier.fetchBooks('hoover');
       return notifier;
     },
   );
@@ -28,9 +28,11 @@ class HomeScreen extends ConsumerWidget {
         title: Text(
           'Home',
           style: TextStyle(
+            fontSize: 18,
             color: AppColors.bottomBackground,
           ),
         ),
+        toolbarHeight: 40,
       ),
       body: SingleChildScrollView(
         child: Padding(

@@ -238,7 +238,7 @@ class BookCard extends ConsumerWidget {
                     children: List.generate(5, (index) {
                       return Icon(
                         index < 3 ? Icons.star : Icons.star_border,
-                        color: AppColors.accent,
+                        color: AppColors.primary,
                         size: 30,
                       );
                     }),
@@ -277,7 +277,7 @@ class BookCard extends ConsumerWidget {
                       Expanded(
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primary,
+                            backgroundColor: AppColors.accent,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),

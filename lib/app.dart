@@ -26,7 +26,7 @@ class PageMeetApp extends ConsumerWidget {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: AppColors.primary,
         backgroundColor: AppColors.bottomBackground,
-        unselectedItemColor: AppColors.accent.withValues(alpha: 0.6),
+        unselectedItemColor: AppColors.unselectedItemColor.withValues(alpha: 0.6),
         currentIndex: currentIdx,
         onTap: (idx) => ref.read(bottomNavIndexProvider.notifier).state = idx,
         type: BottomNavigationBarType.fixed,
